@@ -71,6 +71,9 @@ ul {
 .sectionLeft {
     width: 50%;
     color: white;
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
 }
 
 sectionRight {
@@ -94,6 +97,8 @@ sectionRight {
     border-radius: 20px;
     color: white;
 
+    width: fit-content;
+
     font-size: 1em;
 
     cursor: pointer;
@@ -104,4 +109,25 @@ sectionRight {
     background-color: white;
     color: lightpink;
     transition: ease-in-out 0.5s;
+}
+
+.sectionLeftImages {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.sectionLeftImage {
+    background-color: white;
+    height: 120px;
+    width: 120px;
+    border-radius: 20px;
+    padding: 10px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.sectionLeftImage img {
+    height: 120px;
 }
