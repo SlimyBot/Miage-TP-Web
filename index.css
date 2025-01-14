@@ -1,3 +1,107 @@
-h1 {
-    text-align: center;
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar li {
+    list-style-type: none;
+    font-size: 1.1em;
+    cursor: pointer;
+
+    transition: ease-in-out 0.2s;
+}
+
+.navbar li:hover {
+    color: lightpink;
+}
+
+ul {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 50px;
+
+    color: white;
+}
+
+.navbar button {
+    background-color: inherit;
+    border: 0.5px white solid;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+
+    font-size: 1em;
+
+    cursor: pointer;
+    transition: ease-in-out 0.5s;
+}
+
+.navbar button:hover {
+    background-color: white;
+    color: lightpink;
+    transition: ease-in-out 0.5s;
+}
+
+.header {
+    background: rgb(26, 207, 120);
+    background: linear-gradient(15deg, lightpink 0%, rgba(0, 212, 255, 1) 100%);
+    padding-top: 20px;
+}
+
+.section {
+    height: 50vh;
+    padding: 70px 50px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sectionLeft {
+    width: 50%;
+    color: white;
+}
+
+sectionRight {
+    width: 50%;
+}
+
+.sectionLeftTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.sectionLeftTitle h1 {
+    margin: 0;
+}
+
+.sectionLeft button {
+    background-color: inherit;
+    border: 0.5px white solid;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+
+    font-size: 1em;
+
+    cursor: pointer;
+    transition: ease-in-out 0.5s;
+}
+
+.sectionLeft button:hover {
+    background-color: white;
+    color: lightpink;
+    transition: ease-in-out 0.5s;
 }
