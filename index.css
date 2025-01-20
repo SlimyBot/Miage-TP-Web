@@ -31,7 +31,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 
     color: white;
 }
@@ -126,7 +126,8 @@ sectionRight {
 }
 
 .sectionLeftImage {
-    background-color: white;
+    background-color: #fffffd50;
+    backdrop-filter: blur(10px);
     height: 120px;
     width: 120px;
     border-radius: 20px;
@@ -139,7 +140,8 @@ sectionRight {
 }
 
 .sectionLeftImage:hover {
-    background-color: violet;
+    background-color: #ee82ee50;
+    backdrop-filter: blur(10px);
 
     transition: ease-in-out 0.5s;
 }
@@ -215,15 +217,21 @@ footer p {
     font-style: bold;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
     .section h1 {
-        font-size: 2em;
+        font-size: 1.7em;
     }
 
     .section {
-        padding: 0;
         flex-direction: column;
         margin: 0;
+
+        text-align: center;
+    }
+
+    .sectionLeftImage {
+        height: 200px;
+        width: 100%;
     }
 
     .section2 {
@@ -243,8 +251,12 @@ footer p {
         display: none;
     }
 
+    .sectionRight {
+        width: 100%;
+    }
+
     .section2 img {
-        display: none;
+        padding-top: 50px;
     }
 
     .navbar {
@@ -254,6 +266,7 @@ footer p {
 
     .sectionLeft {
         align-items: center;
+        width: 100%;
     }
 
     .sectionLeftImages {
@@ -271,5 +284,8 @@ footer p {
         flex-direction: column;
         align-content: center;
         justify-content: center;
+        margin-top: -1px;
+
+        text-align: center;
     }
 }
