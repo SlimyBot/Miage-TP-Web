@@ -3,6 +3,9 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .navbar li {
@@ -14,10 +17,10 @@ body {
 }
 
 .navbar li:hover {
-    color: lightpink;
+    color: violet;
 }
 
-ul {
+.navbar ul {
     display: flex;
     gap: 40px;
     align-items: center;
@@ -29,7 +32,6 @@ ul {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: 0px 50px;
 
     color: white;
 }
@@ -48,8 +50,9 @@ ul {
 }
 
 .navbar button:hover {
-    background-color: white;
-    color: lightpink;
+    background-color: violet;
+    color: white;
+    border: 0.5px violet solid;
     transition: ease-in-out 0.5s;
 }
 
@@ -60,12 +63,17 @@ ul {
 }
 
 .section {
-    height: 50vh;
-    padding: 70px 50px;
+    height: fit-content;
+    padding: 150px 50px 150px 50px;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+}
+
+.section h1 {
+    font-size: 4em;
 }
 
 .sectionLeft {
@@ -73,7 +81,7 @@ ul {
     color: white;
     display: flex;
     flex-flow: column;
-    gap: 20px;
+    gap: 40px;
 }
 
 sectionRight {
@@ -91,8 +99,8 @@ sectionRight {
 }
 
 .sectionLeft button {
-    background-color: inherit;
-    border: 0.5px white solid;
+    background-color: violet;
+    border: 2px violet solid;
     padding: 10px 20px;
     border-radius: 20px;
     color: white;
@@ -106,8 +114,8 @@ sectionRight {
 }
 
 .sectionLeft button:hover {
-    background-color: white;
-    color: lightpink;
+    background-color: transparent;
+    color: violet;
     transition: ease-in-out 0.5s;
 }
 
@@ -126,8 +134,142 @@ sectionRight {
 
     display: flex;
     justify-content: center;
+
+    transition: ease-in-out 0.5s;
+}
+
+.sectionLeftImage:hover {
+    background-color: violet;
+
+    transition: ease-in-out 0.5s;
 }
 
 .sectionLeftImage img {
-    height: 120px;
+    height: auto;
+}
+
+footer {
+    background: linear-gradient(0deg, white 50%, lightskyblue 100%);
+    color: black;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+    padding: 100px 0 50px 0;
+}
+
+footer li {
+    list-style-type: none;
+    font-size: 1.1em;
+    cursor: pointer;
+
+    transition: ease-in-out 0.2s;
+}
+
+footer li:hover {
+    color: violet;
+}
+
+footer ul {
+    align-items: center;
+    padding: 0;
+}
+
+footer p {
+    color: violet;
+    font-size: 1.8em;
+    margin-bottom: 0;
+}
+
+.section2 {
+    background-color: lightskyblue;
+    height: fit-content;
+    padding: 70px 50px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 50px 50px 0 0;
+    margin: -50px 0px 0px 0px;
+}
+
+.section2 img {
+    height: 400px;
+}
+
+.sectionRight {
+    width: 600px;
+    text-align: center;
+}
+
+.section2 h1 {
+    margin: 0;
+}
+
+.section2 span {
+    color: violet;
+    font-size: 1.2em;
+    font-style: bold;
+}
+
+@media screen and (max-width: 450px) {
+    .section h1 {
+        font-size: 2em;
+    }
+
+    .section {
+        padding: 0;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .section2 {
+        padding: 0px;
+    }
+
+    .footer {
+        flex-direction: col;
+        margin: 0;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    .section .sectionRight img {
+        display: none;
+    }
+
+    .section2 img {
+        display: none;
+    }
+
+    .navbar {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sectionLeft {
+        align-items: center;
+    }
+
+    .sectionLeftImages {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .section2 {
+        padding: 50px 20px;
+        flex-direction: column;
+    }
+
+    footer {
+        padding: 50px 0;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
 }
